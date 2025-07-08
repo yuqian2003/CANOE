@@ -48,3 +48,11 @@ iii) 标准化技术失效：
 在处理外生变量上，也就是当作普通输入特征来直接拼接到LSTM的每一步中
 
 ![Figure 2.2 ](Figure/2.2.png)
+
+
+## Paper3 Tiny Time Mixers (TTMs): Fast Pre-trained Models for Enhanced Zero/Few-shot Forecasting of Multivariate Time Series
+
+#### Motivation
+![Figure 3.1 ](Figure/3.1.png)
+#### Method
+不主动区分主变量和协变量，而是在每次训练的时候随机选择一个变量作为预测目标，其他所有变量变成协变量。换句话说，模型需要学会如何利用其他变量去预测指定变量（随机）。为了让模型知道需要预测的变量，每个变量被设计了一个embedding编码，变量名变成可学习的嵌入向量，提升泛化能力。
