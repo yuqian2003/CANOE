@@ -1,4 +1,4 @@
-# CNOLP: Contextual Next Location Prediction
+# Chaotic Neural Oscillator Network for Next Location Prediction
 
 This is the PyTorch implementation of the CNOLP and helps readers to reproduce the results in the paper "**Chaotic Neural Oscillator Network for Next Location Prediction**".
 
