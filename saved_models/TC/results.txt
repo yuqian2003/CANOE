@@ -1,0 +1,11 @@
+*********************** Test ***********************
+base_dim: 16 | dim: 16
+AT_type: attn | topic_num: 400
+encoder: trans
+Epoch 60: Total 163840 predictions on Next Location:
+Acc@1: 44.34
+Acc@3: 63.60
+Acc@5: 70.33
+Acc@10: 77.15
+MRR: 55.98
+
