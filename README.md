@@ -1,6 +1,6 @@
 # CNOLP: Contextual Next Location Prediction
 
-This is the PyTorch implementation of the Multi-Context aware Location Prediction model (MCLP) and helps readers to reproduce the results in the paper "**Going Where, by Whom, and at What Time: Next Location Prediction Considering User Preference and Temporal Regularity**".
+This is the PyTorch implementation of the CNOLP and helps readers to reproduce the results in the paper "**Chaotic Neural Oscillator Network for Next Location Prediction**".
 
 ## Model Framework
 <p align="middle" width="100%">
@@ -81,12 +81,12 @@ python ./model/run.py --dataset MP --dim 16 --topic 400 --at attn --encoder lstm
 
 ## Citation
 ```
-@inproceedings{sun2024going,
-  title={Going Where, by Whom, and at What Time: Next Location Prediction Considering User Preference and Temporal Regularity},
-  author={Sun, Tianao and Fu, Ke and Huang, Weiming and Zhao, Kai and Gong, Yongshun and Chen, Meng},
-  booktitle={Proceedings of the 30th ACM SIGKDD Conference on Knowledge Discovery and Data Mining},
-  pages={2784--2793},
-  year={2024}
+@inproceedings{xxxxx,
+  title={xxxxxx},
+  author={xxxxxx},
+  booktitle={xxxxxx},
+  pages={xxxxx},
+  year={xxxxx}
 }
 ```
 
