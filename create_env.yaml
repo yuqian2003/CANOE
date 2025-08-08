@@ -16,3 +16,5 @@ dependencies:
       - easydict==1.10
       - gensim==4.3.2 
       - scipy==10.1.0
+
+pip install [package_name] -i https://pypi.tuna.tsinghua.edu.cn/simple
