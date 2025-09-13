@@ -5,9 +5,6 @@ import torch
 from torch.utils.data import DataLoader
 from dataloader import MyDataset
 
-
-
-
 def custom_collate(batch, device, args):
     batch_dict = {
         'user': torch.tensor([item['user'] for item in batch]).to(device),
