@@ -177,19 +177,19 @@ class Oscillator(nn.Module):
         self.uthreshold = 0
         self.vthreshold = 0
         if args.type == 'cnoa_tc':
-            self.u = 1  # excitatory
-            self.v = 1  # inhibitory
+            self.u = 0  # excitatory
+            self.v = 0  # inhibitory
             self.a1 = torch.tensor([5]).to(device)
             self.a2 = torch.tensor([5]).to(device)
             self.b1 = torch.tensor([5]).to(device)
             self.b2 = torch.tensor([-5]).to(device)
         elif args.type == 'cnoa_mp':
-            self.u = 1  # excitatory
-            self.v = 1  # inhibitory
+            self.u = 0  # excitatory
+            self.v = 0  # inhibitory
             self.a1 = torch.tensor([5]).to(device)
             self.a2 = torch.tensor([5]).to(device)
-            self.b1 = torch.tensor([5]).to(device)
-            self.b2 = torch.tensor([5]).to(device)
+            self.b1 = torch.tensor([-5]).to(device)
+            self.b2 = torch.tensor([-5]).to(device)
         self.k = torch.tensor([-500]).to(device)
         self.n = 50
     def Calculatez(self, I):
