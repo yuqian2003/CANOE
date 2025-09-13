@@ -51,7 +51,7 @@ Run the experiments in Mobile Phone dataset:
 ```bash
 bash run_mp.sh
 ```
-4. Main Arguments
+
 
 ## Citation 📚
 
