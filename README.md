@@ -37,21 +37,9 @@ cd CNOLP
 ```
 
 2. Install dependencies:
-Option 1: 
 ```bash
 conda env create -f create_env.yml
 conda activate cnolp
-
-```
-
-Option 2: 
-```bash
-# Create and activate conda environment
-conda create -n myenv python=3.9
-conda activate myenv
-
-# Install dependencies
-pip install -r requirements.txt
 ```
 
 3. Run the experiments in LoCoMo dataset:
@@ -59,7 +47,6 @@ pip install -r requirements.txt
 python test_advanced.py 
 ```
 
-**Note:** To achieve the optimal performance reported in our paper, please adjust the hyperparameter k value accordingly. 
 
 ## Citation 📚
 
