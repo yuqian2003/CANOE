@@ -37,18 +37,14 @@ cd CNOLP
 ```
 
 2. Install dependencies:
-Option 1: Using venv (Python virtual environment)
+Option 1: 
 ```bash
-# Create and activate virtual environment
-python -m venv a-mem
-source a-mem/bin/activate  # Linux/Mac
-a-mem\Scripts\activate     # Windows
+conda env create -f create_env.yml
+conda activate cnolp
 
-# Install dependencies
-pip install -r requirements.txt
 ```
 
-Option 2: Using Conda
+Option 2: 
 ```bash
 # Create and activate conda environment
 conda create -n myenv python=3.9
