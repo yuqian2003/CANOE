@@ -70,10 +70,10 @@ python test_advanced.py
 If you use this code in your research, please cite our work:
 
 ```bibtex
-@article{xu2025mem,
-  title={A-mem: Agentic memory for llm agents},
-  author={Xu, Wujiang and Liang, Zujie and Mei, Kai and Gao, Hang and Tan, Juntao and Zhang, Yongfeng},
-  journal={arXiv preprint arXiv:2502.12110},
+@article{xxx,
+  title={CNOLP: Chaotic Neural Oscillator Network for Next Location Prediction},
+  author={Wu, Yuqian and Peng, Yuhong and Yu, Jiapeng and Liu, Xiangyu and Yan, Zeting and Lin, Kang and Su, Weifeng and Qu, Bingqing and Raymond S.T. Lee and Yang, Dingqi },
+  journal={xxxxxxxxxx},
   year={2025}
 }
 ```
