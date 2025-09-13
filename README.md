@@ -42,9 +42,12 @@ conda env create -f create_env.yml
 conda activate cnolp
 ```
 
-3. Run the experiments in LoCoMo dataset:
-```python
-python test_advanced.py 
+3. Run the experiments in Traffic Camera or Mobile Phone dataset:
+```bash
+bash run_tc.sh
+```
+```bash
+bash run_mp.sh
 ```
 
 
