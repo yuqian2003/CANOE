@@ -5,9 +5,10 @@ CNOLP is a novel model designed to predict a user's next destination by effectiv
 
 ## Introduction 🌟
 
-Large Language Model (LLM) agents have demonstrated remarkable capabilities in handling complex real-world tasks through external tool usage. However, to effectively leverage historical experiences, they require sophisticated memory systems. Traditional memory systems, while providing basic storage and retrieval functionality, often lack advanced memory organization capabilities.
+The analysis of human mobility is a pivotal task with broad applications, from optimizing urban resources to providing personalized navigation. A significant challenge in this field is accurately predicting a user's next location, a task complicated by the dual nature of human movement: it is both periodic (e.g., daily commutes) and chaotic (e.g., spontaneous trips). 
 
-Our project introduces an innovative **Agentic Memory** system that revolutionizes how LLM agents manage and utilize their memories:
+To address these limitations, Our project introduces an novel model that integrates a biologically inspired chaotic attention mechanism to better balance chaotic and periodic mobile pattern.
+
 
 ## Key Modules ✨
 
