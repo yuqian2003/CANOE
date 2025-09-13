@@ -2,9 +2,6 @@
 
 CNOLP is a novel model designed to predict a user's next destination by effectively balancing their periodic and chaotic movement patterns, while also leveraging contextual information for improved accuracy.
 
-> **Note:** This repository is specifically designed to reproduce the results presented in our paper. If you want to use the A-MEM system in building your agents, please refer to our official implementation at: [A-mem-sys](https://github.com/WujiangXu/A-mem-sys)
-
-For more details, please refer to our paper: [A-MEM: Agentic Memory for LLM Agents](https://arxiv.org/pdf/2502.12110)
 
 ## Introduction 🌟
 
@@ -21,19 +18,10 @@ Our project introduces an innovative **Agentic Memory** system that revolutioniz
 ## Framework 🏗️
 
 <div align="center">
-  <img src="Figure/framework.jpg" alt="CNOLP Framework" width="800"/>
+  <img src="Fig/CNOLP.jpg" alt="CNOLP Framework" width="800"/>
   <br>
-  <em>The framework of our Agentic Memory system showing the dynamic interaction between LLM agents and memory components.</em>
+  <em>Illustration of the CNOLP framework.</em>
 </div>
-
-## How It Works 🛠️
-
-When a new memory is added to the system:
-1. Generates comprehensive notes with structured attributes
-2. Creates contextual descriptions and tags
-3. Analyzes historical memories for relevant connections
-4. Establishes meaningful links based on similarities
-5. Enables dynamic memory evolution and updates
 
 ## Results 📊
 
