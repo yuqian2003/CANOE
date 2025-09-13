@@ -32,8 +32,8 @@ Empirical experiments conducted on six foundation models demonstrate superior pe
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/WujiangXu/AgenticMemory.git
-cd AgenticMemory
+git clone https://github.com/yuqian2003/CNOLP.git
+cd CNOLP
 ```
 
 2. Install dependencies:
