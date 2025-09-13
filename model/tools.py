@@ -1,9 +1,9 @@
 import os
 import time
-import numpy as np
 import torch
-from torch.utils.data import DataLoader
+import numpy as np
 from dataloader import MyDataset
+from torch.utils.data import DataLoader
 
 def custom_collate(batch, device, args):
     batch_dict = {
