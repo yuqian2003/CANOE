@@ -26,7 +26,7 @@ To address these limitations, Our project introduces an novel model that integra
 
 ## Results 📊
 
-Empirical experiments conducted on six foundation models demonstrate superior performance compared to existing SOTA baselines.
+Empirical experiments conducted on two real-world datasets demonstrate superior performance compared to existing SOTA baselines.
 
 ## Getting Started 🚀
 
