@@ -1,12 +1,12 @@
-import argparse,os,time,torch
 import numpy as np
-from torch.utils.data import DataLoader
-from transformers import get_linear_schedule_with_warmup,get_cosine_schedule_with_warmup
 import torch.nn as nn
-from dataloader import MyDataset
-from cnolp import CNOLP_tc, CNOLP_mp
+import argparse,os,time,torch
 import torch.nn.functional as F
+from dataloader import MyDataset
+from torch.utils.data import DataLoader
+from cnolp import CNOLP_tc, CNOLP_mp
 from tools import run_test, train_epoch, get_mapper, custom_collate
+from transformers import get_linear_schedule_with_warmup,get_cosine_schedule_with_warmup
 
 def get_dataset_info(dataset_path):
     user2id = np.load(os.path.join(dataset_path, 'user_mapper.npy'), allow_pickle=True).item()
