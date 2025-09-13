@@ -1,6 +1,6 @@
 # Chaotic Neural Oscillator Network for Next Location Prediction 🧠
 
-A novel agentic memory system for LLM agents that can dynamically organize memories in an agentic way.
+CNOLP is a novel model designed to predict a user's next destination by effectively balancing their periodic and chaotic movement patterns, while also leveraging contextual information for improved accuracy.
 
 > **Note:** This repository is specifically designed to reproduce the results presented in our paper. If you want to use the A-MEM system in building your agents, please refer to our official implementation at: [A-mem-sys](https://github.com/WujiangXu/A-mem-sys)
 
@@ -12,26 +12,16 @@ Large Language Model (LLM) agents have demonstrated remarkable capabilities in h
 
 Our project introduces an innovative **Agentic Memory** system that revolutionizes how LLM agents manage and utilize their memories:
 
-<div align="center">
-  <img src="Figure/intro-a.jpg" alt="Traditional Memory System" width="600"/>
-  <img src="Figure/intro-b.jpg" alt="Our Proposed Agentic Memory" width="600"/>
-  <br>
-  <em>Comparison between traditional memory system (top) and our proposed agentic memory (bottom). Our system enables dynamic memory operations and flexible agent-memory interactions.</em>
-</div>
+## Key Modules ✨
 
-## Key Features ✨
-
-- 🔄 Dynamic memory organization based on Zettelkasten principles
-- 🔍 Intelligent indexing and linking of memories
-- 📝 Comprehensive note generation with structured attributes
-- 🌐 Interconnected knowledge networks
-- 🔄 Continuous memory evolution and refinement
-- 🤖 Agent-driven decision making for adaptive memory management
+- 🌐 Multimodal Contextual Embedding Module: Aiming at transforming heterogeneous ``who-when-where'' contexts into unified vector representations
+- 📝 Tri-Pair Interaction Encoder: To capture pairwise relationships among user, time, and location modalities
+- 🔄 Cross Context Attentive Decoder: Integrating the features of pairwise interaction by aligning ``who-when-where'' dependencies
 
 ## Framework 🏗️
 
 <div align="center">
-  <img src="Figure/framework.jpg" alt="Agentic Memory Framework" width="800"/>
+  <img src="Figure/framework.jpg" alt="CNOLP Framework" width="800"/>
   <br>
   <em>The framework of our Agentic Memory system showing the dynamic interaction between LLM agents and memory components.</em>
 </div>
