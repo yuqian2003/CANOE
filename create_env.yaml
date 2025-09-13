@@ -5,16 +5,17 @@ channels:
   - defaults
 dependencies:
   - python=3.9
-  - pytorch=2.1.0
-  - pytorch-cuda=11.8
   - pip=23.3.1
+  - pytorch=2.1.2
+  - pytorch-cuda=11.8
   - pip:
-      - numpy==1.23.2
+      - numpy==1.26.4
+      - pandas==1.5.3
+      - scipy==1.13.1
+      - scikit-learn==1.7.1
       - transformers==4.30.2
-      - tqdm==4.64.0
+      - tokenizers==0.13.3
+      - gensim==4.3.3
+      - tqdm==4.64.1
       - yarm==0.2.2
       - easydict==1.10
-      - gensim==4.3.2 
-      - scipy==10.1.0
-
-pip install [package_name] -i https://pypi.tuna.tsinghua.edu.cn/simple
