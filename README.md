@@ -42,14 +42,16 @@ conda env create -f create_env.yml
 conda activate cnolp
 ```
 
-3. Run the experiments in Traffic Camera or Mobile Phone dataset:
+3. Model Training
+Run the experiments in Traffic Camera:
 ```bash
 bash run_tc.sh
 ```
+Run the experiments in Mobile Phone dataset:
 ```bash
 bash run_mp.sh
 ```
-
+4. Main Arguments
 
 ## Citation 📚
 
