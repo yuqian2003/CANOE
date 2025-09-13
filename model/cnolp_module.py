@@ -1,10 +1,10 @@
 import math
 import torch
-from torch import nn
 import pandas as pd
+from torch import nn
+from torch.nn import init
 import torch.nn.functional as F
 from torch.nn.parameter import Parameter 
-from torch.nn import init
 device = torch.device("cuda")
 
 # Multimodal Contextual Embedding Module
