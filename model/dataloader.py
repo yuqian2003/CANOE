@@ -8,11 +8,13 @@ from gensim import models
 from torch.utils.data import Dataset
 from tqdm import tqdm
 
+from gensim.test.utils import common_dictionary, datapath, temporary_file
+from gensim.corpora import mmcorpus
 import collections
 
 class MyDataset(Dataset):
-    def __init__(self, config, dataset_path, device, load_mode):
-        self.config = config
+    def __init__(self, args, dataset_path, device, load_mode):
+        self.args = args
         self.device = device
         self.load_mode = load_mode
         self.dataset_path = dataset_path
@@ -20,10 +22,9 @@ class MyDataset(Dataset):
         self.user2id = np.load(os.path.join(dataset_path, 'user_mapper.npy'), allow_pickle=True).item()
         self.location2id = np.load(os.path.join(dataset_path, 'location_mapper.npy'), allow_pickle=True).item()
 
-        self.model = 'lda'
-        if self.config.Dataset.topic_num > 0:
-            if not os.path.exists(os.path.join(dataset_path, f'user_topic_loc_{self.config.Dataset.topic_num}.npy')):
-                self.preprocess_data(topic_num=self.config.Dataset.topic_num)
+        if self.args.topic > 0:
+            if not os.path.exists(os.path.join(dataset_path, f'user_topic_loc_{self.args.topic}.npy')):
+                self.preprocess_data(topic_num=self.args.topic)
 
         if load_mode == 'test':
             self.data = self.load_npy_file(os.path.join(dataset_path, f'{load_mode}.npy'))
@@ -45,8 +46,9 @@ class MyDataset(Dataset):
     def preprocess_data(self, topic_num):
         trans_time_individual = []
         occur_time_individual = np.zeros(shape=(len(self.user2id), 24), dtype=np.float32)
-        user_loc_matrix = np.zeros((len(self.user2id), len(self.location2id)))  # for LDA
+        user_loc_matrix = np.zeros((len(self.user2id), len(self.location2id)))  # for LDA/ATM
 
+        #user_week_docs = collections.defaultdict(list)       # {(user_id, week): [loc, loc, ...]} 
         user_week_docs = collections.defaultdict(set)  # This stores (user_id, week): {loc_ids}
         week_doc_count = collections.Counter()  # {week: number of docs in this week}
         
@@ -67,6 +69,10 @@ class MyDataset(Dataset):
                     weekday,hour ,week_hour = datetime_to_features(ts)
                     next_weekday,next_hour, next_week_hour = datetime_to_features(next_ts)
                     
+                    #dt = datetime.datetime.fromtimestamp(int(ts) // 1000)
+                    #year_week = f"{dt.isocalendar().year}-W{dt.isocalendar().week:02d}"
+                    
+                    #week = week_hour // 168
                     week = (datetime.datetime.fromtimestamp(int(ts) // 1000).isocalendar()[1])## 获取ISO标准咒术
                 
                     loc_id = self.location2id[loc]
@@ -89,7 +95,6 @@ class MyDataset(Dataset):
                 time_row_sums = trans_matrix_time.sum(axis=1)
                 trans_matrix_time = trans_matrix_time / time_row_sums[:, np.newaxis]
                 trans_time_individual.append(trans_matrix_time)
-
             dictionary = gensim.corpora.Dictionary([[str(i)] for i in range(user_loc_matrix.shape[1])])
             lda_corpus = []
             for user in user_loc_matrix:
@@ -97,7 +102,7 @@ class MyDataset(Dataset):
                 lda_corpus.append(dictionary.doc2bow(user_doc))
 
             if topic_num > 0:
-                print(f'Generating topic model: lda, topic_num={topic_num}')
+                print(f'Generating LDA topic model, topic_num={topic_num}')
                 
                 lda = models.LdaModel(lda_corpus, num_topics=topic_num, random_state=42)
                 user_topics = np.zeros((len(user_loc_matrix), topic_num))
@@ -105,7 +110,7 @@ class MyDataset(Dataset):
                     user_doc = [str(loc) for loc, count in enumerate(user) for _ in range(int(count))]
                     for item in lda[dictionary.doc2bow(user_doc)]:
                         user_topics[i, item[0]] = item[1]
-        
+
                 np.save(os.path.join(self.dataset_path, f'user_topic_loc_{topic_num}.npy'), user_topics)
             
             np.save(os.path.join(self.dataset_path, f'prob_matrix_time_individual.npy'), trans_time_individual)
@@ -120,12 +125,12 @@ class MyDataset(Dataset):
                 user = line.strip().split(',')[0]
                 occur_time_user = occur_time_individual[self.user2id[user]]
                 stay_points = line.strip().split(',')[1:]
-                sequence_count, left = divmod(len(stay_points), self.config.Dataset.sequence_length)
+                sequence_count, left = divmod(len(stay_points), self.args.sequence_length)
                 assert sequence_count > 0, f"{user}'s does not have enough data."
                 sequence_count -= 1 if left == 0 else 0
                 for i in range(sequence_count):
-                    split_start = i * self.config.Dataset.sequence_length
-                    split_end = (i + 1) * self.config.Dataset.sequence_length
+                    split_start = i * self.args.sequence_length
+                    split_end = (i + 1) * self.args.sequence_length
                     location_x = [self.location2id[item.split('@')[0]] for item in stay_points[split_start:split_end]]
                     timestamp_x = [item.split('@')[1] for item in stay_points[split_start:split_end]]
                     location_y = [self.location2id[item.split('@')[0]] for item in stay_points[split_start + 1:split_end + 1]]
@@ -170,9 +175,9 @@ class MyDataset(Dataset):
             data['prob_matrix_time_individual'] = prob_matrix_time_individual[user_idx]
             data['occur_time_individual'] = occur_time_individual[user_idx]
         
-        if self.config.Dataset.topic_num > 0:
+        if self.args.topic > 0:
             user_topic_loc = np.load(
-                os.path.join(self.dataset_path, f'user_topic_loc_{self.config.Dataset.topic_num}.npy'),
+                os.path.join(self.dataset_path, f'user_topic_loc_{self.args.topic}.npy'),
                 allow_pickle=True)
             for data in loaded_data:
                 user_idx = data['user']
