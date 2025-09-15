@@ -24,16 +24,14 @@ To address these limitations, Our project introduces an novel model that integra
   <em>Illustration of the CANOE framework.</em>
 </div>
 
-## Results 📊
+## Main Experimental Results 📊
 
 Empirical experiments conducted on two real-world datasets demonstrate superior performance compared to existing SOTA baselines.
 
-## Main Experimental Results
-
-| Method                | \multicolumn{5}{c|}{\textbf{traffic camera}}                                   | \multicolumn{5}{c|}{\textbf{mobile phone}}                                     |
-| :-------------------- | :-----: | :-----: | :-----: | :-----: | :-----: | :-----: | :-----: | :-----: | :-----: | :-----: |
-|                       | Acc@1   | Acc@3   | Acc@5   | Acc@10  | MRR     | Acc@1   | Acc@3   | Acc@5   | Acc@10  | MRR     |
-| **1-MMC** | 23.61   | 39.50   | 44.43   | 48.29   | 32.42   | 29.48   | 45.68   | 49.54   | 52.46   | 38.21   |
+| Method | \multicolumn{5}{c|}{\textbf{traffic camera}} | \multicolumn{5}{c|}{\textbf{mobile phone}} |
+| :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+| | Acc@1 | Acc@3 | Acc@5 | Acc@10 | MRR | Acc@1 | Acc@3 | Acc@5 | Acc@10 | MRR |
+| **1-MMC** | 23.61 | 39.50 | 44.43 | 48.29 | 32.42 | 29.48 | 45.68 | 49.54 | 52.46 | 38.21 |
 | **Graph-Flashback** | 35.69 (0.03) | 55.64 (0.08) | 63.73 (0.05) | 72.25 (0.05) | 48.18 (0.03) | 37.61 (0.03) | 59.62 (0.02) | 65.86 (0.02) | 71.88 (0.03) | 50.31 (0.02) |
 | **SNPM** | 36.43 (0.05) | 56.18 (0.02) | 63.74 (0.04) | 71.45 (0.02) | 48.58 (0.01) | 37.99 (0.07) | 59.89 (0.02) | 66.03 (0.04) | 71.92 (0.01) | 50.60 (0.04) |
 | **DeepMove** | 35.89 (0.07) | 51.60 (0.07) | 57.72 (0.07) | 65.15 (0.04) | 46.08 (0.05) | 37.38 (0.04) | 56.84 (0.03) | 63.10 (0.02) | 69.88 (0.03) | 49.11 (0.02) |
@@ -45,7 +43,9 @@ Empirical experiments conducted on two real-world datasets demonstrate superior 
 | **MCLP-LSTM** | 39.90 (0.06) | 58.32 (0.07) | 65.14 (0.07) | 72.43 (0.07) | 51.28 (0.05) | 39.42 (0.16) | 60.74 (0.07) | 66.95 (0.06) | 72.98 (0.06) | 51.81 (0.08) |
 | **MCLP-Attention** | 40.11 (0.05) | 58.44 (0.05) | 65.30 (0.04) | 72.58 (0.05) | 51.46 (0.02) | 39.65 (0.02) | 61.02 (0.05) | 67.18 (0.06) | 73.15 (0.05) | 52.04 (0.03) |
 | **CANOE** | **45.37 (0.09)** | **64.43 (0.18)** | **71.03 (0.15)** | **77.78 (0.16)** | **56.86 (0.12)** | **40.92 (0.01)** | **63.04 (0.12)** | **69.41 (0.07)** | **75.49 (0.07)** | **53.69 (0.04)** |
-| **Improvement (%)** | 13.11   | 10.25   | 8.78    | 7.16    | 10.49   | 3.20    | 3.30    | 3.32    | 3.20    | 3.17    |
+| **Improvement (%)** | 13.11 | 10.25 | 8.78 | 7.16 | 10.49 | 3.20 | 3.30 | 3.32 | 3.20 | 3.17 |
+
+
 
 ## Getting Started 🚀
 
