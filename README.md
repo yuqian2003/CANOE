@@ -1,6 +1,6 @@
-# Chaotic Neural Oscillator Network for Next Location Prediction 🧠
+# Beyond Regularity: Modeling Chaotic Mobility Patterns for Next Location Prediction 🧠
 
-CNOLP is a novel model designed to predict a user's next destination by effectively balancing their periodic and chaotic movement patterns, while also leveraging contextual information for improved accuracy.
+CANOE is a novel model designed to predict a user's next destination by effectively balancing their periodic and chaotic movement patterns, while also leveraging contextual information for improved accuracy.
 
 
 ## Introduction 🌟
@@ -19,9 +19,9 @@ To address these limitations, Our project introduces an novel model that integra
 ## Framework 🏗️
 
 <div align="center">
-  <img src="Fig/CNOLP.jpg" alt="CNOLP Framework" width="800"/>
+  <img src="Fig/CANOE.jpg" alt="CANOE Framework" width="800"/>
   <br>
-  <em>Illustration of the CNOLP framework.</em>
+  <em>Illustration of the CANOE framework.</em>
 </div>
 
 ## Results 📊
@@ -32,14 +32,14 @@ Empirical experiments conducted on two real-world datasets demonstrate superior 
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/yuqian2003/CNOLP.git
-cd CNOLP
+git clone https://github.com/yuqian2003/CANOE.git
+cd CANOE
 ```
 
 2. Install dependencies:
 ```bash
 conda env create -f create_env.yml
-conda activate cnolp
+conda activate canoe
 ```
 
 3. Model Training
@@ -59,7 +59,7 @@ If you use this code in your research, please cite our work:
 
 ```bibtex
 @article{xxx,
-  title={CNOLP: Chaotic Neural Oscillator Network for Next Location Prediction},
+  title={Beyond Regularity: Modeling Chaotic Mobility Patterns for Next Location Prediction},
   author={Wu, Yuqian and Peng, Yuhong and Yu, Jiapeng and Liu, Xiangyu and Yan, Zeting and Lin, Kang and Su, Weifeng and Qu, Bingqing and Raymond S.T. Lee and Yang, Dingqi },
   journal={xxxxxxxxxx},
   year={2025}
