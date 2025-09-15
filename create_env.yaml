@@ -1,4 +1,4 @@
-name: cnolp
+name: canoe
 channels:
   - pytorch
   - nvidia
