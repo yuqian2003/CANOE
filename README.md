@@ -28,9 +28,9 @@ To address these limitations, Our project introduces an novel model that integra
 
 Empirical experiments conducted on two real-world datasets demonstrate superior performance compared to existing SOTA baselines.
 
-| Method | \multicolumn{5}{c|}{\textbf{traffic camera}} | \multicolumn{5}{c|}{\textbf{mobile phone}} |
-| :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-| | Acc@1 | Acc@3 | Acc@5 | Acc@10 | MRR | Acc@1 | Acc@3 | Acc@5 | Acc@10 | MRR |
+| Method | Acc@1 (traffic camera) | Acc@3 (traffic camera) | Acc@5 (traffic camera) | Acc@10 (traffic camera) | MRR (traffic camera) | Acc@1 (mobile phone) | Acc@3 (mobile phone) | Acc@5 (mobile phone) | Acc@10 (mobile phone) | MRR (mobile phone) |
+|---|---|---|---|---|---|---|---|---|---|---|
+| ... | ... | ... | ... | ... | ... | ... | ... | ... | ... | ... |
 | **1-MMC** | 23.61 | 39.50 | 44.43 | 48.29 | 32.42 | 29.48 | 45.68 | 49.54 | 52.46 | 38.21 |
 | **Graph-Flashback** | 35.69 (0.03) | 55.64 (0.08) | 63.73 (0.05) | 72.25 (0.05) | 48.18 (0.03) | 37.61 (0.03) | 59.62 (0.02) | 65.86 (0.02) | 71.88 (0.03) | 50.31 (0.02) |
 | **SNPM** | 36.43 (0.05) | 56.18 (0.02) | 63.74 (0.04) | 71.45 (0.02) | 48.58 (0.01) | 37.99 (0.07) | 59.89 (0.02) | 66.03 (0.04) | 71.92 (0.01) | 50.60 (0.04) |
