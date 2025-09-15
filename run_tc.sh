@@ -21,7 +21,7 @@ LR=0.05
 ENTROPY_LOW=0.40
 CHAOS_LIST=0.75,0.8,0.85,0.9
 
-echo "=== CNOLP Training Start ==="
+echo "=== CANOE Training Start ==="
 
 reset_tc
 python model/run.py \
@@ -40,7 +40,7 @@ python model/run.py \
   --entropy_low ${ENTROPY_LOW} \
   --chaotic_high_list ${CHAOS_LIST}
 
-echo "CNOLP Training Completed."
+echo "CANOE Training Completed."
 
 
 
