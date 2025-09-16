@@ -144,17 +144,13 @@ class LocationTimePair(nn.Module):
     def __init__(self, args):
         super(LocationTimePair, self).__init__()
         input_dim = args.dim
-
         encoder_layer = nn.TransformerEncoderLayer(d_model=input_dim,
                                                    activation='gelu',
                                                    batch_first=True,
                                                    dim_feedforward=input_dim,
                                                    nhead=4,
                                                    dropout=0.1)
-
         encoder_norm = nn.LayerNorm(input_dim)
-
-        # Transformer Encoder
         self.encoder = nn.TransformerEncoder(encoder_layer=encoder_layer,
                                              num_layers=3,
                                              norm=encoder_norm)
