@@ -51,8 +51,8 @@ Below is the full evaluation table comparing CANOE and baselines across entropy 
 
 | Dataset | Threshold | Model             | Acc@1     | Acc@3     | Acc@5     | Acc@10    | MRR       |
 |---------|-----------|-------------------|-----------|-----------|-----------|-----------|-----------|
-| Traffic | 0.75      | MCLP-LSTM         | 39.50     | 57.78     | 64.55     | 71.75     | 50.80     |
-| Camera  |           | MCLP-Attention    | 39.67     | 57.93     | 64.73     | 71.90     | 50.97     |
+| Traffic Camera | 0.75      | MCLP-LSTM         | 39.50     | 57.78     | 64.55     | 71.75     | 50.80     |
+|         |           | MCLP-Attention    | 39.67     | 57.93     | 64.73     | 71.90     | 50.97     |
 |         |           | CANOE(w/o CNOA)   | 43.80     | 63.12     | 70.07     | 77.27     | 55.58     |
 |         |           | CANOE             | 45.00     | 64.10     | 70.77     | 77.58     | 56.54     |
 |         | 0.80      | MCLP-LSTM         | 38.78     | 57.19     | 64.06     | 71.36     | 50.18     |
@@ -67,8 +67,8 @@ Below is the full evaluation table comparing CANOE and baselines across entropy 
 |         |           | MCLP-Attention    | 35.69     | 54.15     | 61.38     | 69.10     | 47.29     |
 |         |           | CANOE(w/o CNOA)   | 40.04     | 59.79     | 67.22     | 75.03     | 52.25     |
 |         |           | CANOE             | 41.63     | 61.17     | 68.27     | 75.65     | 53.57     |
-| Mobile  | 0.75      | MCLP-LSTM         | 37.01     | 59.08     | 65.31     | 71.41     | 49.77     |
-| Phone   |           | MCLP-Attention    | 37.34     | 59.33     | 65.70     | 71.92     | 50.09     |
+| Mobile Phone  | 0.75      | MCLP-LSTM         | 37.01     | 59.08     | 65.31     | 71.41     | 49.77     |
+|         |           | MCLP-Attention    | 37.34     | 59.33     | 65.70     | 71.92     | 50.09     |
 |         |           | CANOE(w/o CNOA)   | 37.82     | 60.85     | 67.63     | 74.16     | 51.16     |
 |         |           | CANOE             | 38.76     | 61.45     | 68.01     | 74.34     | 51.87     |
 |         | 0.80      | MCLP-LSTM         | 36.20     | 58.39     | 64.70     | 70.87     | 49.04     |
