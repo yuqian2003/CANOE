@@ -14,7 +14,7 @@ reset_tc() {
 
 mkdir -p saved_models
 cd saved_models
-mkdir TC
+mkdir -p TC
 cd ..
 
 LR=0.005
