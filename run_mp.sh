@@ -16,7 +16,7 @@ cd saved_models
 mkdir MP
 cd ..
 
-LR=0.05
+LR=0.005
 ENTROPY_LOW=0.40
 CHAOS_LIST=0.75,0.8,0.85,0.9
 
