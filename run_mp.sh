@@ -13,7 +13,7 @@ reset_mp() {
 
 mkdir -p saved_models
 cd saved_models
-mkdir MP
+mkdir -p MP
 cd ..
 
 LR=0.005
