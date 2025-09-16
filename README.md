@@ -9,6 +9,7 @@ The analysis of human mobility is a pivotal task with broad applications, from o
 
 To address these limitations, Our project introduces an novel model that integrates a biologically inspired chaotic attention mechanism to better balance chaotic and periodic mobile pattern.
 
+For more details, please refer to our paper: [CANOE](https://arxiv.org/abs/2509.11713v1)
 
 ## Key Modules ✨
 
