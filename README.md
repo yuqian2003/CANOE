@@ -75,11 +75,14 @@ bash run_mp.sh
 If you use this code in your research, please cite our work:
 
 ```bibtex
-@article{xxx,
-  title={Beyond Regularity: Modeling Chaotic Mobility Patterns for Next Location Prediction},
-  author={Wu, Yuqian and Peng, Yuhong and Yu, Jiapeng and Liu, Xiangyu and Yan, Zeting and Lin, Kang and Su, Weifeng and Qu, Bingqing and Raymond S.T. Lee and Yang, Dingqi },
-  journal={xxxxxxxxxx},
-  year={2025}
+@misc{wu2025regularitymodelingchaoticmobility,
+      title={Beyond Regularity: Modeling Chaotic Mobility Patterns for Next Location Prediction}, 
+      author={Yuqian Wu and Yuhong Peng and Jiapeng Yu and Xiangyu Liu and Zeting Yan and Kang Lin and Weifeng Su and Bingqing Qu and Raymond Lee and Dingqi Yang},
+      year={2025},
+      eprint={2509.11713},
+      archivePrefix={arXiv},
+      primaryClass={cs.LG},
+      url={https://arxiv.org/abs/2509.11713}, 
 }
 ```
 
