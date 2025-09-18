@@ -47,7 +47,7 @@ Empirical experiments conducted on two real-world datasets demonstrate superior 
 
 
 ## Performance Comparison Across Chaotic Levels 📊 
-Below is the full evaluation table comparing CANOE and baselines across entropy thresholds on two datasets: TC and MP.
+Below is the full evaluation table comparing CANOE and baselines across entropy thresholds.
 
 
 | Dataset       | Threshold | Model             | Acc@1         | Acc@3         | Acc@5         | Acc@10        | MRR           |
