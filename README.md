@@ -128,6 +128,9 @@ If you use this code in your research, please cite our work:
       url={https://arxiv.org/abs/2509.11713}, 
 }
 ```
+## Acknowledgement🙏
+
+The authors thank for Beijing Normal-Hong Kong Baptist University and the IRADS lab for the provision of computing facilities for the conduct of this research. This project has received funding from the Science and Technology Development Fund, Macau SAR (0011/2025/RIB1, 001/2024/SKL), and Jiangyin Hi-tech Industrial Development Zone under the Taihu Innovation Scheme (EF2025-00003-SKL-IOTSC).
 
 ## License 📄
 
