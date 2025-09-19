@@ -103,7 +103,7 @@ conda activate canoe
 ```
 
 3. Model Training
-Run the experiments in Traffic Camera:
+Run the experiments in Traffic Camera dataset:
 ```bash
 bash run_tc.sh
 ```
